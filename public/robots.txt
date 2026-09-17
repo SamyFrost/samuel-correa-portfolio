@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samyfrost.github.io/samuel-correa-portfolio/sitemap.xml

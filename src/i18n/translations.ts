@@ -8,9 +8,12 @@ export type Language = (typeof languages)[number];
 
 const es = {
   meta: {
-    title: "Samuel Correa — Diseñador Gráfico",
+    title: "Samuel Correa — Diseñador Gráfico | Branding, Diseño Digital y Audiovisual",
     description:
-      "Ideas visuales que conectan marcas con su audiencia. Identidad de marca, diseño digital, audiovisual y producción creativa asistida por IA.",
+      "Diseñador gráfico especializado en identidad de marca, diseño para redes sociales, edición de video y producción creativa asistida por IA. Precios claros desde $25. Atiendo en español, portugués e inglés.",
+    locale: "es_ES",
+    keywords:
+      "diseñador gráfico, identidad de marca, diseño de logo, branding, diseño para redes sociales, edición de video, motion graphics, Samuel Correa",
   },
   nav: {
     work: "Trabajo",
@@ -213,9 +216,12 @@ type Dict = typeof es;
 
 const pt: Dict = {
   meta: {
-    title: "Samuel Correa — Designer Gráfico",
+    title: "Samuel Correa — Designer Gráfico | Branding, Design Digital e Audiovisual",
     description:
-      "Ideias visuais que conectam marcas com sua audiência. Identidade de marca, design digital, audiovisual e produção criativa assistida por IA.",
+      "Designer gráfico especializado em identidade de marca, design para redes sociais, edição de vídeo e produção criativa assistida por IA. Preços claros a partir de $25. Atendo em português, espanhol e inglês.",
+    locale: "pt_BR",
+    keywords:
+      "designer gráfico, identidade de marca, criação de logo, branding, design para redes sociais, edição de vídeo, motion graphics, Samuel Correa",
   },
   nav: {
     work: "Trabalho",
@@ -416,9 +422,12 @@ const pt: Dict = {
 
 const en: Dict = {
   meta: {
-    title: "Samuel Correa — Graphic Designer",
+    title: "Samuel Correa — Graphic Designer | Branding, Digital Design & Video",
     description:
-      "Visual ideas that connect brands with their audience. Brand identity, digital design, audiovisual and AI-assisted creative production.",
+      "Graphic designer specializing in brand identity, social media design, video editing and AI-assisted creative production. Clear pricing from $25. Working in English, Spanish and Portuguese.",
+    locale: "en_US",
+    keywords:
+      "graphic designer, brand identity, logo design, branding, social media design, video editing, motion graphics, Samuel Correa",
   },
   nav: {
     work: "Work",

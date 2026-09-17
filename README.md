@@ -85,7 +85,24 @@ de la marca. Para cambiar una pieza basta reemplazar el archivo manteniendo la p
 (los `tall` son A4, `wide` es 3:2 y `full` es 16:9) y editar nombre y categoría en
 `translations.ts` → `work.items`.
 
+## SEO
+
+- `index.html` lleva title y description orientados a búsqueda, canonical, Open Graph
+  con imagen propia (`og-samuel-correa.jpg`, 1200×630) y datos estructurados JSON-LD
+  (`Person` + `ProfessionalService` con catálogo de precios).
+- Cada idioma tiene URL propia: `/` (es), `/?lang=pt`, `/?lang=en`, declaradas con
+  `hreflang` y listadas en `sitemap.xml`. Al cambiar de idioma se actualizan la URL,
+  el `<title>`, la description, el canonical y el `og:locale`.
+- `<noscript>` con un resumen de servicios, paquetes y contacto, para rastreadores
+  que no ejecutan JavaScript.
+- `robots.txt` apunta al sitemap.
+
+> Si el sitio se muda a un dominio propio hay que actualizar la URL en cuatro lugares:
+> `SITE_URL` en `src/i18n/LanguageContext.tsx`, las etiquetas de `index.html`,
+> `public/robots.txt` y `public/sitemap.xml`.
+
 ### Pendiente
 
-1. Confirmar si van testimonios de clientes (el catálogo no los incluye).
-2. Confirmar dominio propio (hoy corre en GitHub Pages).
+1. Registrar el sitio en Google Search Console y enviar el sitemap.
+2. Confirmar si van testimonios de clientes (el catálogo no los incluye).
+3. Confirmar dominio propio (hoy corre en GitHub Pages).
