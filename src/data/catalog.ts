@@ -87,12 +87,12 @@ export const processSteps: ProcessStep[] = [
 ];
 
 export const projects: Project[] = [
-  { id: "p1", image: asset("work/01-branding.jpg"), span: "tall" },
-  { id: "p2", image: asset("work/02-social.jpg"), span: "square" },
-  { id: "p3", image: asset("work/03-motion.jpg"), span: "wide" },
-  { id: "p4", image: asset("work/04-packaging.jpg"), span: "tall" },
-  { id: "p5", image: asset("work/05-editorial.jpg"), span: "wide" },
-  { id: "p6", image: asset("work/06-ai.jpg"), span: "square" },
+  { id: "lumiere", image: asset("work/01-lumiere.jpg"), span: "wide" },
+  { id: "eclosion", image: asset("work/02-eclosion.jpg"), span: "tall" },
+  { id: "avivaHispanos", image: asset("work/03-aviva-hispanos.jpg"), span: "tall" },
+  { id: "institutoAviva", image: asset("work/04-instituto-aviva.jpg"), span: "tall" },
+  { id: "avivaCultos", image: asset("work/05-aviva-cultos.jpg"), span: "tall" },
+  { id: "submersos", image: asset("work/06-submersos.jpg"), span: "full" },
 ];
 
 export const contact = {

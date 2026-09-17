@@ -67,10 +67,25 @@ Todo respeta `prefers-reduced-motion: reduce`: se desactivan preloader, Lenis, c
 |---|---|---|
 | `public/samuel-portrait.png` | Recortado de `Presentacion samuiel.jpg`, fondo transparente, B/N | Definitivo |
 | `public/catalogo-samuel-correa.pdf` | Catálogo de servicios 2026 | Definitivo |
-| `public/work/*.jpg` | Composiciones editoriales generadas | **Provisional** |
+| `public/work/*.jpg` | Piezas reales de proyectos de Samuel | Definitivo |
+
+### Piezas de portafolio
+
+| Archivo | Proyecto | Categoría |
+|---|---|---|
+| `01-lumiere.jpg` | Lumière Beauty Studio | Identidad de marca |
+| `02-eclosion.jpg` | Eclosion — portada del manual de marca | Manual de marca |
+| `03-aviva-hispanos.jpg` | MHI Água Viva Curitiba | Flyer / Poster |
+| `04-instituto-aviva.jpg` | Instituto Aviva | Diseño editorial |
+| `05-aviva-cultos.jpg` | MHI Água Viva Curitiba | Redes sociales |
+| `06-submersos.jpg` | Submersos Podcast | Paquete visual de podcast |
+
+Se muestran en blanco y negro y pasan a color al hacer hover, para no pelear con el naranja
+de la marca. Para cambiar una pieza basta reemplazar el archivo manteniendo la proporción
+(los `tall` son A4, `wide` es 3:2 y `full` es 16:9) y editar nombre y categoría en
+`translations.ts` → `work.items`.
 
 ### Pendiente
 
-1. **Reemplazar las 6 piezas de `public/work/`** por trabajos reales de Samuel, manteniendo los nombres de archivo (o actualizando las rutas en `data/catalog.ts`). Los nombres y categorías de cada proyecto se editan en `translations.ts` → `work.items`.
-2. Confirmar si van testimonios de clientes (el catálogo no los incluye).
-3. Confirmar dominio y hosting.
+1. Confirmar si van testimonios de clientes (el catálogo no los incluye).
+2. Confirmar dominio propio (hoy corre en GitHub Pages).

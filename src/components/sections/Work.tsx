@@ -2,10 +2,12 @@ import { projects } from "../../data/catalog";
 import { useT } from "../../i18n/LanguageContext";
 import { FadeUp, RevealLines } from "../motion-primitives";
 
+// Los encuadres siguen la proporción real de cada pieza para recortar lo mínimo:
+// los flyers y el manual son A4, el mockup es 3:2 y los overlays 16:9.
 const SPAN_CLASS: Record<string, string> = {
-  tall: "md:col-span-4 md:row-span-2 aspect-[4/5]",
-  square: "md:col-span-4 aspect-square",
+  tall: "md:col-span-4 aspect-[3/4]",
   wide: "md:col-span-8 aspect-[16/10]",
+  full: "md:col-span-12 aspect-[16/9]",
 };
 
 export function Work() {

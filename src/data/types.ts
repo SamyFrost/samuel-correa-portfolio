@@ -27,7 +27,7 @@ export type Project = {
   /** Reemplazar por las piezas reales de portafolio manteniendo la ruta. */
   image: string;
   /** Proporción de la celda en la grilla bento. */
-  span: "tall" | "wide" | "square";
+  span: "tall" | "wide" | "full";
 };
 
 export type ProcessStep = {
