@@ -7,12 +7,12 @@ export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
  *  Poner en 0 para desactivarla (se ocultan banner, tachado y etiquetas). */
 export const DISCOUNT_PERCENT = 40;
 
-/** Aplica el descuento a cada monto de un precio ("$100 — $150" → "$60 — $90"). */
+/** Aplica el descuento a cada monto de un precio ("$100 — $150" → "$60 — $90"),
+ *  redondeado al dólar entero. */
 export const discountPrice = (price: string) =>
-  price.replace(/\$(\d+(?:\.\d+)?)/g, (_, n: string) => {
-    const v = Number(n) * (1 - DISCOUNT_PERCENT / 100);
-    return `$${Number.isInteger(v) ? v : v.toFixed(2).replace(/\.?0+$/, "")}`;
-  });
+  price.replace(/\$(\d+(?:\.\d+)?)/g, (_, n: string) =>
+    `$${Math.round(Number(n) * (1 - DISCOUNT_PERCENT / 100))}`,
+  );
 
 export const serviceAreas: ServiceArea[] = [
   {
