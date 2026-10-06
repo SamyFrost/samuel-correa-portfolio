@@ -3,6 +3,17 @@ import type { Package, ProcessStep, Project, ServiceArea } from "./types";
 /** Prefija con la base del despliegue: en GitHub Pages el sitio vive en /<repo>/. */
 export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
+/** Oferta vigente: % de descuento sobre todos los servicios y paquetes.
+ *  Poner en 0 para desactivarla (se ocultan banner, tachado y etiquetas). */
+export const DISCOUNT_PERCENT = 40;
+
+/** Aplica el descuento a cada monto de un precio ("$100 — $150" → "$60 — $90"),
+ *  redondeado al dólar entero. */
+export const discountPrice = (price: string) =>
+  price.replace(/\$(\d+(?:\.\d+)?)/g, (_, n: string) =>
+    `$${Math.round(Number(n) * (1 - DISCOUNT_PERCENT / 100))}`,
+  );
+
 export const serviceAreas: ServiceArea[] = [
   {
     id: "identidad",

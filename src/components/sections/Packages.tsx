@@ -1,5 +1,6 @@
 import { addOnIds, contact, packages } from "../../data/catalog";
 import { useT } from "../../i18n/LanguageContext";
+import { PriceTag, PromoBanner } from "../Promo";
 import { FadeUp, RevealLines } from "../motion-primitives";
 
 export function Packages() {
@@ -30,8 +31,10 @@ export function Packages() {
           </FadeUp>
         </div>
 
+        <PromoBanner />
+
         {/* Cuatro paquetes en 2×2 */}
-        <div className="mt-16 grid grid-cols-1 border-l border-t border-rule sm:grid-cols-2 md:mt-24">
+        <div className="mt-10 grid grid-cols-1 border-l border-t border-rule sm:grid-cols-2 md:mt-24">
           {grid.map((pkg, i) => {
             const copy = t.packages.items[pkg.id as keyof typeof t.packages.items];
             return (
@@ -50,9 +53,10 @@ export function Packages() {
                     <span className="display text-2xl transition-colors duration-500 group-hover:text-paper md:text-3xl">
                       {pkg.name}
                     </span>
-                    <span className="display text-3xl transition-colors duration-500 group-hover:text-accent md:text-4xl">
-                      {pkg.price}
-                    </span>
+                    <PriceTag
+                      price={pkg.price}
+                      className="display justify-end text-3xl transition-colors duration-500 group-hover:text-accent md:text-4xl"
+                    />
                   </div>
                   <p className="mt-5 text-sm leading-relaxed text-muted transition-colors duration-500 group-hover:text-paper/70">
                     {copy.desc}
@@ -87,9 +91,10 @@ export function Packages() {
                 <span className="display mt-6 block text-[clamp(2.25rem,6vw,4.5rem)]">
                   {featured.name}
                 </span>
-                <span className="display mt-2 block text-[clamp(2.5rem,7vw,5rem)] text-accent">
-                  {featured.price}
-                </span>
+                <PriceTag
+                  price={featured.price}
+                  className="display mt-2 flex text-[clamp(2.5rem,7vw,5rem)] text-accent"
+                />
               </div>
               <div className="mt-8 md:col-span-6 md:col-start-7 md:mt-0 md:self-center">
                 <p className="text-lg leading-relaxed text-paper md:text-xl">

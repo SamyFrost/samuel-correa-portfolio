@@ -49,6 +49,12 @@ const es = {
       { value: 24, prefix: "", suffix: "h", label: "Entrega express" },
     ],
   },
+  promo: {
+    badge: "Oferta por tiempo limitado",
+    title: "40% OFF en todos los servicios y paquetes",
+    note: "Precio real tachado, precio con descuento aplicado. Escríbeme por WhatsApp para aprovecharla.",
+    discounted: "Precio con descuento",
+  },
   services: {
     number: "03",
     title: "Servicios",
@@ -257,6 +263,12 @@ const pt: Dict = {
       { value: 24, prefix: "", suffix: "h", label: "Entrega express" },
     ],
   },
+  promo: {
+    badge: "Oferta por tempo limitado",
+    title: "40% OFF em todos os serviços e pacotes",
+    note: "Preço original riscado, preço com desconto aplicado. Fale comigo no WhatsApp para aproveitar.",
+    discounted: "Preço com desconto",
+  },
   services: {
     number: "03",
     title: "Serviços",
@@ -462,6 +474,12 @@ const en: Dict = {
       { value: 3, prefix: "", suffix: "", label: "Languages" },
       { value: 24, prefix: "", suffix: "h", label: "Express delivery" },
     ],
+  },
+  promo: {
+    badge: "Limited-time offer",
+    title: "40% OFF all services and packages",
+    note: "Original price crossed out, discounted price shown. Message me on WhatsApp to claim it.",
+    discounted: "Discounted price",
   },
   services: {
     number: "03",

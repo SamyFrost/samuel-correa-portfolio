@@ -3,6 +3,7 @@ import { useState } from "react";
 import { contact, serviceAreas } from "../../data/catalog";
 import type { ServiceArea } from "../../data/types";
 import { useT } from "../../i18n/LanguageContext";
+import { PriceTag, PromoBanner } from "../Promo";
 import { EASE_EXPO, FadeUp, RevealLines } from "../motion-primitives";
 
 function AreaRow({
@@ -74,16 +75,18 @@ function AreaRow({
                   >
                     <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
                       <span className="display text-xl md:text-2xl">{item.name}</span>
-                      <span className="display text-lg text-accent md:text-xl">
-                        {item.price}
+                      <PriceTag
+                        price={item.price}
+                        className="display text-lg text-accent md:text-xl"
+                      >
                         {item.unit && (
-                          <span className="ml-2 text-sm text-muted">
+                          <span className="text-sm text-muted">
                             {item.unit === "piece"
                               ? t.services.perPiece
                               : t.services.perSlide}
                           </span>
                         )}
-                      </span>
+                      </PriceTag>
                     </div>
                     <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-muted">
                       {
@@ -127,6 +130,8 @@ export function Services() {
             </p>
           </FadeUp>
         </div>
+
+        <PromoBanner />
 
         <div className="mt-16 md:mt-24">
           {serviceAreas.map((area) => (
