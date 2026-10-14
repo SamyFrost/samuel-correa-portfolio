@@ -18,7 +18,7 @@ export function PromoBanner() {
           <span className="label block text-[0.6rem] text-paper/80">
             {t.promo.badge}
           </span>
-          <span className="display mt-1 block text-[clamp(1.75rem,4.5vw,3rem)] leading-none">
+          <span className="display mt-1 block text-[clamp(1.08rem,2.79vw,1.86rem)] leading-none">
             {t.promo.title}
           </span>
         </div>

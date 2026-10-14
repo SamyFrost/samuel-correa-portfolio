@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Logo } from "../Logo";
 import { contact } from "../../data/catalog";
 import { useLanguage } from "../../i18n/LanguageContext";
 
@@ -24,7 +25,7 @@ export function Footer() {
       <div className="shell">
         <div className="flex flex-col gap-6 border-t border-paper/15 pt-8 md:flex-row md:items-center md:justify-between">
           <div>
-            <span className="display block text-xl md:text-2xl">Samuel Correa</span>
+            <Logo className="block h-5 w-auto text-paper md:h-6" />
             <span className="label mt-1 block text-[0.6rem] text-paper/50">
               {t.footer.role}
             </span>

@@ -57,7 +57,7 @@ export function Hero() {
         <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Bloque tipográfico */}
           <div className="order-2 lg:order-1 lg:col-span-7">
-            <h1 className="display text-[clamp(3.25rem,min(14vw,19vh),13rem)] leading-[0.82]">
+            <h1 className="display text-[clamp(2.6rem,min(12vw,13vh),9.5rem)] leading-[0.92]">
               {line(t.hero.first, 0.35)}
               {line(t.hero.last, 0.43)}
             </h1>
@@ -101,6 +101,19 @@ export function Hero() {
                 style={{ y: blockY }}
                 aria-hidden="true"
               />
+              {/* Encuadre: las cuatro marcas de corte del logo enmarcan el retrato */}
+              <motion.span
+                className="pointer-events-none absolute -inset-3 md:-inset-6"
+                initial={{ opacity: 0, scale: 1.08 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.1, ease: EASE_EXPO, delay: 0.55 }}
+                aria-hidden="true"
+              >
+                <span className="absolute left-0 top-0 h-7 w-7 border-l-[3px] border-t-[3px] border-ink md:h-12 md:w-12 md:border-l-4 md:border-t-4" />
+                <span className="absolute right-0 top-0 h-7 w-7 border-r-[3px] border-t-[3px] border-ink md:h-12 md:w-12 md:border-r-4 md:border-t-4" />
+                <span className="absolute bottom-0 left-0 h-7 w-7 border-b-[3px] border-l-[3px] border-ink md:h-12 md:w-12 md:border-b-4 md:border-l-4" />
+                <span className="absolute bottom-0 right-0 h-7 w-7 border-b-[3px] border-r-[3px] border-ink md:h-12 md:w-12 md:border-b-4 md:border-r-4" />
+              </motion.span>
               <motion.img
                 src={asset("samuel-portrait.png")}
                 alt={t.hero.portraitAlt}

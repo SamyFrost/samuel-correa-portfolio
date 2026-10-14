@@ -1,4 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { LogoMarkAnimated } from "./Logo";
 import { useEffect, useState } from "react";
 import { EASE_EXPO } from "./motion-primitives";
 
@@ -61,9 +62,12 @@ export function Preloader({ onDone }: { onDone: () => void }) {
           aria-hidden="true"
         >
           <div className="shell flex h-full flex-col justify-between py-10">
-            <span className="label text-xs text-muted">Samuel Correa</span>
+            <div className="flex items-center gap-4">
+              <LogoMarkAnimated className="h-10 w-10 text-paper md:h-12 md:w-12" delay={0.1} />
+              <span className="label text-xs text-muted">Samuel Correa</span>
+            </div>
             <div className="flex items-end justify-between">
-              <span className="display text-[clamp(4rem,18vw,11rem)] leading-none">
+              <span className="display text-[clamp(2.48rem,11.2vw,6.82rem)] leading-none">
                 {String(count).padStart(3, "0")}
               </span>
               <span className="label mb-3 text-xs text-muted">

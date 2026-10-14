@@ -30,13 +30,13 @@ function AreaRow({
           className="group flex w-full items-center gap-5 py-7 text-left md:gap-10 md:py-10"
         >
           <span
-            className={`display shrink-0 text-2xl transition-colors duration-500 md:text-4xl ${
+            className={`display shrink-0 text-xl transition-colors duration-500 md:text-3xl ${
               open ? "text-accent" : "text-muted"
             }`}
           >
             {area.number}
           </span>
-          <span className="display flex-1 text-[clamp(1.75rem,5vw,3.75rem)] leading-none transition-colors duration-500 group-hover:text-accent">
+          <span className="display flex-1 text-[clamp(1.08rem,3.1vw,2.33rem)] leading-none transition-colors duration-500 group-hover:text-accent">
             {copy.title}
           </span>
           <span className="label hidden text-xs text-muted sm:block">{area.range}</span>
@@ -74,10 +74,10 @@ function AreaRow({
                     className="border-t border-rule py-5 first:border-t-0 first:pt-0"
                   >
                     <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                      <span className="display text-xl md:text-2xl">{item.name}</span>
+                      <span className="display text-lg md:text-xl">{item.name}</span>
                       <PriceTag
                         price={item.price}
-                        className="display text-lg text-accent md:text-xl"
+                        className="display text-base text-accent md:text-lg"
                       >
                         {item.unit && (
                           <span className="text-sm text-muted">
@@ -121,7 +121,7 @@ export function Services() {
             <RevealLines
               as="h2"
               lines={[t.services.title]}
-              className="display mt-4 text-[clamp(2.75rem,9vw,7rem)]"
+              className="display mt-4 text-[clamp(1.71rem,5.58vw,4.34rem)]"
             />
           </div>
           <FadeUp delay={0.1} className="self-end lg:col-span-4 lg:col-start-9">

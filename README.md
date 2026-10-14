@@ -23,8 +23,12 @@ Para publicar: subir la carpeta `dist/` a cualquier hosting estático (Netlify, 
 | `--color-muted` | `#8A8A85` | Texto secundario |
 | `--color-rule` | `#E2E2DE` | Líneas divisorias de 1px |
 
-- **Bebas Neue** (`font-display`) → titulares, números, precios, botones y labels. Siempre en mayúsculas.
-- **Montserrat** (`font-body`) → cuerpo de texto.
+- **Unbounded 600** (`font-display`) → titulares, números y precios. Siempre en mayúsculas.
+- **Instrument Sans** (`font-body`, `font-label`) → cuerpo de texto y labels (labels en mayúsculas, 600, tracking 0.12em).
+- **Logo "Encuadre de corte"** (`src/components/Logo.tsx`): cuatro marcas de corte encierran un cuadro naranja.
+  `Logo` (horizontal), `LogoMark` (símbolo) y `LogoMarkAnimated` (preloader). Trazos generados desde el kit de marca;
+  no se redibujan a mano. Favicon, ícono de app e imagen OG en `public/`.
+- Manual de marca completo (Design System): https://claude.ai/artifact/7TNABSz5j413n8c8iNuRtM
 - Radio de esquina **0px en todo el sitio** (regla global en `styles.css`); solo los chips de herramientas son `rounded-full`.
 - Sin sombras. La jerarquía se construye con escala tipográfica y reglas de 1px.
 

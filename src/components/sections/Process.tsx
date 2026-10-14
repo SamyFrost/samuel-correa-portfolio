@@ -27,7 +27,7 @@ export function Process() {
             <RevealLines
               as="h2"
               lines={[t.process.title]}
-              className="display mt-4 text-[clamp(2.75rem,9vw,7rem)] text-paper"
+              className="display mt-4 text-[clamp(1.71rem,5.58vw,4.34rem)] text-paper"
             />
           </div>
           <FadeUp delay={0.1} className="self-end lg:col-span-4 lg:col-start-9">
@@ -50,10 +50,10 @@ export function Process() {
             {processSteps.map((step, i) => (
               <FadeUp key={step.id} delay={i * 0.09}>
                 <li className="relative border-t border-paper/15 pt-6 md:border-t-0 md:pt-0">
-                  <span className="outline-num block text-[clamp(3rem,7vw,5.5rem)]">
+                  <span className="outline-num block text-[clamp(1.86rem,4.34vw,3.41rem)]">
                     {step.number}
                   </span>
-                  <span className="display mt-4 block text-2xl text-paper md:mt-6 md:text-3xl">
+                  <span className="display mt-4 block text-xl text-paper md:mt-6 md:text-2xl">
                     {step.name}
                   </span>
                   <p className="mt-3 max-w-[30ch] text-sm leading-relaxed text-paper/60">

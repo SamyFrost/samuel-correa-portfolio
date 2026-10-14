@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { contact } from "../data/catalog";
 import { useLanguage } from "../i18n/LanguageContext";
 import { languages, type Language } from "../i18n/translations";
+import { Logo } from "./Logo";
 import { EASE_EXPO } from "./motion-primitives";
 
 const SECTIONS = [
@@ -78,8 +79,8 @@ export function Header() {
         }`}
       >
         <div className="shell flex h-16 items-center justify-between gap-6 md:h-20">
-          <a href="#top" className="display text-lg tracking-tight md:text-xl">
-            Samuel Correa
+          <a href="#top" className="text-ink" aria-label="Samuel Correa">
+            <Logo className="h-[18px] w-auto md:h-[22px]" />
           </a>
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Principal">
@@ -131,7 +132,7 @@ export function Header() {
           >
             <div className="shell flex h-full flex-col py-6">
               <div className="flex items-center justify-between">
-                <span className="display text-lg">Samuel Correa</span>
+                <Logo className="h-[18px] w-auto text-paper" />
                 <button
                   ref={closeRef}
                   type="button"
@@ -149,7 +150,7 @@ export function Header() {
                     <motion.a
                       href={s.href}
                       onClick={() => setOpen(false)}
-                      className="display block text-[clamp(2.75rem,13vw,5rem)] text-paper transition-colors duration-300 hover:text-accent"
+                      className="display block text-[clamp(1.71rem,8.06vw,3.1rem)] text-paper transition-colors duration-300 hover:text-accent"
                       initial={reduced ? { opacity: 0 } : { y: "110%" }}
                       animate={reduced ? { opacity: 1 } : { y: "0%" }}
                       transition={{

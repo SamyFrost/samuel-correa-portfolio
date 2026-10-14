@@ -26,7 +26,7 @@ export function Work() {
             <RevealLines
               as="h2"
               lines={[t.work.title]}
-              className="display mt-4 text-[clamp(2.5rem,8vw,6.5rem)]"
+              className="display mt-4 text-[clamp(1.55rem,4.96vw,4.03rem)]"
             />
           </div>
           <FadeUp delay={0.1} className="self-end lg:col-span-4 lg:col-start-9">
@@ -53,7 +53,7 @@ export function Work() {
                     className="h-full w-full object-cover grayscale transition-all duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.03] group-hover:grayscale-0"
                   />
                   <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-full bg-ink/90 p-5 text-paper transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:translate-y-0">
-                    <span className="display block text-xl md:text-2xl">
+                    <span className="display block text-lg md:text-xl">
                       {copy.name}
                     </span>
                     <span className="label mt-1 block text-[0.6rem] text-accent">

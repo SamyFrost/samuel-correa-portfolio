@@ -21,7 +21,7 @@ export function Packages() {
             <RevealLines
               as="h2"
               lines={[t.packages.title]}
-              className="display mt-4 text-[clamp(2.75rem,9vw,7rem)]"
+              className="display mt-4 text-[clamp(1.71rem,5.58vw,4.34rem)]"
             />
           </div>
           <FadeUp delay={0.1} className="self-end lg:col-span-4 lg:col-start-9">
@@ -50,12 +50,12 @@ export function Packages() {
                   className="flex h-full flex-col p-8 transition-colors duration-500 hover:bg-ink md:p-10"
                 >
                   <div className="flex items-baseline justify-between gap-4">
-                    <span className="display text-2xl transition-colors duration-500 group-hover:text-paper md:text-3xl">
+                    <span className="display text-xl transition-colors duration-500 group-hover:text-paper md:text-2xl">
                       {pkg.name}
                     </span>
                     <PriceTag
                       price={pkg.price}
-                      className="display justify-end text-3xl transition-colors duration-500 group-hover:text-accent md:text-4xl"
+                      className="display justify-end text-2xl transition-colors duration-500 group-hover:text-accent md:text-3xl"
                     />
                   </div>
                   <p className="mt-5 text-sm leading-relaxed text-muted transition-colors duration-500 group-hover:text-paper/70">
@@ -88,12 +88,12 @@ export function Packages() {
                 <span className="label inline-block bg-accent px-3 py-1.5 text-[0.6rem] text-paper">
                   {t.packages.featuredTag}
                 </span>
-                <span className="display mt-6 block text-[clamp(2.25rem,6vw,4.5rem)]">
+                <span className="display mt-6 block text-[clamp(1.4rem,3.72vw,2.79rem)]">
                   {featured.name}
                 </span>
                 <PriceTag
                   price={featured.price}
-                  className="display mt-2 flex text-[clamp(2.5rem,7vw,5rem)] text-accent"
+                  className="display mt-2 flex text-[clamp(1.55rem,4.34vw,3.1rem)] text-accent"
                 />
               </div>
               <div className="mt-8 md:col-span-6 md:col-start-7 md:mt-0 md:self-center">
@@ -117,7 +117,7 @@ export function Packages() {
         <div className="mt-20 md:mt-28">
           <FadeUp>
             <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-rule pb-5">
-              <h3 className="display text-3xl md:text-4xl">{t.packages.addOnsTitle}</h3>
+              <h3 className="display text-2xl md:text-3xl">{t.packages.addOnsTitle}</h3>
               <p className="text-sm text-muted">{t.packages.addOnsSubtitle}</p>
             </div>
           </FadeUp>
@@ -128,7 +128,7 @@ export function Packages() {
                 <FadeUp key={id} delay={i * 0.04}>
                   <li className="flex items-baseline justify-between gap-6 border-b border-rule py-4">
                     <span className="text-sm text-ink">{addOn.name}</span>
-                    <span className="display shrink-0 text-lg text-accent">
+                    <span className="display shrink-0 text-base text-accent">
                       {addOn.price}
                     </span>
                   </li>

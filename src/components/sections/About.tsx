@@ -11,14 +11,14 @@ export function About() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <FadeUp>
-              <span className="outline-num block text-[clamp(5rem,12vw,10rem)]">
+              <span className="outline-num block text-[clamp(3.1rem,7.44vw,6.2rem)]">
                 {t.about.number}
               </span>
             </FadeUp>
             <RevealLines
               as="h2"
               lines={[t.about.title]}
-              className="display mt-4 text-[clamp(2.5rem,7vw,6rem)]"
+              className="display mt-4 text-[clamp(1.55rem,4.34vw,3.72rem)]"
             />
           </div>
 
@@ -46,7 +46,7 @@ export function About() {
                 i > 0 ? "md:border-l md:pl-8" : ""
               } ${i % 2 === 1 ? "border-l pl-6 md:pl-8" : ""}`}
             >
-              <span className="display block text-[clamp(2.75rem,6vw,4.5rem)] text-ink">
+              <span className="display block text-[clamp(1.71rem,3.72vw,2.79rem)] text-ink">
                 <Counter to={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               </span>
               <span className="label mt-3 block text-[0.65rem] text-muted">

@@ -16,7 +16,7 @@ export function Marquee() {
             {set.map((word, i) => (
               <span
                 key={`${copy}-${word}-${i}`}
-                className="display flex items-center whitespace-nowrap text-[clamp(1.75rem,4vw,3.25rem)] text-ink"
+                className="display flex items-center whitespace-nowrap text-[clamp(1.08rem,2.48vw,2.02rem)] text-ink"
               >
                 {word}
                 <span className="mx-6 text-accent md:mx-10">—</span>

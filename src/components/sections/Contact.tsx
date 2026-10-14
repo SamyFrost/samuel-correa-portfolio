@@ -17,7 +17,7 @@ export function Contact() {
         <RevealLines
           as="h2"
           lines={[t.contact.line1, t.contact.line2]}
-          className="display mt-6 text-[clamp(2.75rem,10vw,8rem)]"
+          className="display mt-6 text-[clamp(1.71rem,6.2vw,4.96rem)]"
         />
 
         <div className="mt-16 grid grid-cols-1 border-t border-ink/20 md:mt-24 md:grid-cols-3">
@@ -29,7 +29,7 @@ export function Contact() {
               href={contact.whatsappHref}
               target="_blank"
               rel="noreferrer noopener"
-              className="display ul-draw mt-3 inline-block text-2xl md:text-3xl"
+              className="display ul-draw mt-3 inline-block text-xl md:text-2xl"
             >
               {contact.whatsappDisplay}
             </a>
@@ -44,7 +44,7 @@ export function Contact() {
             </span>
             <a
               href={contact.emailHref}
-              className="display ul-draw mt-3 inline-block break-all text-2xl md:text-3xl"
+              className="display ul-draw mt-3 inline-block normal-case text-[clamp(1rem,4.4vw,1.25rem)] tracking-[-0.02em] md:text-lg xl:text-xl"
             >
               {contact.email}
             </a>
