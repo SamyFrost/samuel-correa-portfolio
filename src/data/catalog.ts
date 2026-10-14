@@ -107,8 +107,8 @@ export const projects: Project[] = [
 ];
 
 export const contact = {
-  whatsappDisplay: "+1 (904) 480-6045",
-  whatsappHref: "https://wa.me/19044806045",
+  whatsappDisplay: "+1 (904) 803-9313",
+  whatsappHref: "https://wa.me/19048039313",
   email: "correasami97@gmail.com",
   emailHref: "mailto:correasami97@gmail.com",
   catalogHref: asset("catalogo-samuel-correa.pdf"),
