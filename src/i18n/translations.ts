@@ -21,7 +21,7 @@ const es = {
     packages: "Paquetes",
     process: "Proceso",
     contact: "Contacto",
-    cta: "Hablemos",
+    cta: "Cotizar",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
     language: "Idioma",
@@ -54,6 +54,10 @@ const es = {
     title: "40% OFF en todos los servicios y paquetes",
     note: "Precio real tachado, precio con descuento aplicado. Escríbeme por WhatsApp para aprovecharla.",
     discounted: "Precio con descuento",
+  },
+  pricing: {
+    from: "A partir de",
+    quoteMessage: "Hola Samuel, me gustaría hacer una cotización",
   },
   services: {
     number: "03",
@@ -134,10 +138,10 @@ const es = {
     number: "04",
     title: "Paquetes",
     subtitle:
-      "Soluciones combinadas con precio cerrado, para quienes prefieren empezar con todo listo en un solo pedido.",
+      "Soluciones combinadas para quienes prefieren empezar con todo listo en un solo pedido. El precio final depende del alcance: pide tu cotización sin compromiso.",
     includes: "Incluye",
     featuredTag: "Más completo",
-    cta: "Solicitar",
+    cta: "Solicitar cotización",
     addOnsTitle: "Add-ons",
     addOnsSubtitle: "Extras que puedes sumar a cualquier servicio.",
     items: {
@@ -209,7 +213,7 @@ const es = {
     emailLabel: "Correo electrónico",
     servicesLabel: "Servicios",
     servicesValue: "Branding · Diseño Digital · Audiovisual · Producción Creativa",
-    cta: "Hablemos de tu proyecto",
+    cta: "Solicita tu cotización",
   },
   footer: {
     role: "Diseñador Gráfico",
@@ -235,7 +239,7 @@ const pt: Dict = {
     packages: "Pacotes",
     process: "Processo",
     contact: "Contato",
-    cta: "Vamos falar",
+    cta: "Orçamento",
     openMenu: "Abrir menu",
     closeMenu: "Fechar menu",
     language: "Idioma",
@@ -268,6 +272,10 @@ const pt: Dict = {
     title: "40% OFF em todos os serviços e pacotes",
     note: "Preço original riscado, preço com desconto aplicado. Fale comigo no WhatsApp para aproveitar.",
     discounted: "Preço com desconto",
+  },
+  pricing: {
+    from: "A partir de",
+    quoteMessage: "Olá Samuel, gostaria de fazer um orçamento",
   },
   services: {
     number: "03",
@@ -348,10 +356,10 @@ const pt: Dict = {
     number: "04",
     title: "Pacotes",
     subtitle:
-      "Soluções combinadas com preço fechado, para quem prefere começar com tudo pronto em um único pedido.",
+      "Soluções combinadas para quem prefere começar com tudo pronto em um único pedido. O preço final depende do escopo: peça seu orçamento sem compromisso.",
     includes: "Inclui",
     featuredTag: "Mais completo",
-    cta: "Solicitar",
+    cta: "Solicitar orçamento",
     addOnsTitle: "Add-ons",
     addOnsSubtitle: "Extras que você pode somar a qualquer serviço.",
     items: {
@@ -423,7 +431,7 @@ const pt: Dict = {
     emailLabel: "E-mail",
     servicesLabel: "Serviços",
     servicesValue: "Branding · Design Digital · Audiovisual · Produção Criativa",
-    cta: "Vamos falar do seu projeto",
+    cta: "Peça seu orçamento",
   },
   footer: {
     role: "Designer Gráfico",
@@ -447,7 +455,7 @@ const en: Dict = {
     packages: "Packages",
     process: "Process",
     contact: "Contact",
-    cta: "Let's talk",
+    cta: "Get a quote",
     openMenu: "Open menu",
     closeMenu: "Close menu",
     language: "Language",
@@ -480,6 +488,10 @@ const en: Dict = {
     title: "40% OFF all services and packages",
     note: "Original price crossed out, discounted price shown. Message me on WhatsApp to claim it.",
     discounted: "Discounted price",
+  },
+  pricing: {
+    from: "From",
+    quoteMessage: "Hi Samuel, I'd like to get a quote",
   },
   services: {
     number: "03",
@@ -557,10 +569,10 @@ const en: Dict = {
     number: "04",
     title: "Packages",
     subtitle:
-      "Bundled solutions at a fixed price, for those who'd rather start with everything ready in a single order.",
+      "Bundled solutions for those who'd rather start with everything ready in a single order. Final pricing depends on scope: request a free, no-obligation quote.",
     includes: "Includes",
     featuredTag: "Most complete",
-    cta: "Request",
+    cta: "Request a quote",
     addOnsTitle: "Add-ons",
     addOnsSubtitle: "Extras you can add to any service.",
     items: {
@@ -632,7 +644,7 @@ const en: Dict = {
     emailLabel: "Email",
     servicesLabel: "Services",
     servicesValue: "Branding · Digital Design · Audiovisual · Creative Production",
-    cta: "Let's talk about your project",
+    cta: "Request a quote",
   },
   footer: {
     role: "Graphic Designer",

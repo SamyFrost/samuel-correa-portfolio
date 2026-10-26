@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { contact, serviceAreas } from "../../data/catalog";
+import { contact, serviceAreas, startPrice } from "../../data/catalog";
 import type { ServiceArea } from "../../data/types";
 import { useT } from "../../i18n/LanguageContext";
 import { PriceTag, PromoBanner } from "../Promo";
@@ -39,7 +39,7 @@ function AreaRow({
           <span className="display flex-1 text-[clamp(1.08rem,3.1vw,2.33rem)] leading-none transition-colors duration-500 group-hover:text-accent">
             {copy.title}
           </span>
-          <span className="label hidden text-xs text-muted sm:block">{area.range}</span>
+          <span className="label hidden text-xs text-muted sm:block">{t.pricing.from} {startPrice(area.range)}</span>
           <span
             className={`relative ml-2 block h-4 w-4 shrink-0 transition-transform duration-500 ${
               open ? "rotate-45" : ""

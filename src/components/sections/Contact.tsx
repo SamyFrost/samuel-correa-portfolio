@@ -1,4 +1,4 @@
-import { contact } from "../../data/catalog";
+import { contact, quoteHref } from "../../data/catalog";
 import { useT } from "../../i18n/LanguageContext";
 import { FadeUp, RevealLines } from "../motion-primitives";
 
@@ -62,7 +62,7 @@ export function Contact() {
 
         <FadeUp delay={0.2}>
           <a
-            href={contact.whatsappHref}
+            href={quoteHref(t.pricing.quoteMessage)}
             target="_blank"
             rel="noreferrer noopener"
             className="label mt-12 inline-flex items-center gap-6 bg-ink px-8 py-6 text-sm text-paper transition-colors duration-300 hover:bg-paper hover:text-ink md:mt-16 md:px-12 md:py-8 md:text-base"

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { contact } from "../data/catalog";
+import { quoteHref } from "../data/catalog";
 import { useLanguage } from "../i18n/LanguageContext";
 import { languages, type Language } from "../i18n/translations";
 import { Logo } from "./Logo";
@@ -96,7 +96,7 @@ export function Header() {
               <LangSwitch />
             </div>
             <a
-              href={contact.whatsappHref}
+              href={quoteHref(t.pricing.quoteMessage)}
               target="_blank"
               rel="noreferrer noopener"
               className="label hidden bg-ink px-5 py-3 text-xs text-paper transition-colors duration-300 hover:bg-accent md:inline-block"
@@ -168,7 +168,7 @@ export function Header() {
               <div className="mt-auto flex items-center justify-between border-t border-paper/20 pt-6">
                 <LangSwitch compact />
                 <a
-                  href={contact.whatsappHref}
+                  href={quoteHref(t.pricing.quoteMessage)}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="label bg-accent px-5 py-3 text-xs text-paper"

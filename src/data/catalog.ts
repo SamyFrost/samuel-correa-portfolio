@@ -14,6 +14,9 @@ export const discountPrice = (price: string) =>
     `$${Math.round(Number(n) * (1 - DISCOUNT_PERCENT / 100))}`,
   );
 
+/** Precio de entrada de un rango ("$100 — $150" → "$100"): se muestra como "A partir de". */
+export const startPrice = (price: string) => price.match(/\$\d+(?:\.\d+)?/)?.[0] ?? price;
+
 export const serviceAreas: ServiceArea[] = [
   {
     id: "identidad",
@@ -113,6 +116,10 @@ export const contact = {
   emailHref: "mailto:correasami97@gmail.com",
   catalogHref: asset("catalogo-samuel-correa.pdf"),
 };
+
+/** Enlace de WhatsApp con un mensaje de cotización ya escrito. */
+export const quoteHref = (message: string) =>
+  `${contact.whatsappHref}?text=${encodeURIComponent(message)}`;
 
 export const tools = [
   "Photoshop",

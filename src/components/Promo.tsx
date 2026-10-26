@@ -1,4 +1,4 @@
-import { DISCOUNT_PERCENT, contact, discountPrice } from "../data/catalog";
+import { DISCOUNT_PERCENT, contact, discountPrice, startPrice } from "../data/catalog";
 import { useT } from "../i18n/LanguageContext";
 import { FadeUp } from "./motion-primitives";
 
@@ -30,7 +30,7 @@ export function PromoBanner() {
   );
 }
 
-/** Precio real tachado + precio con descuento + etiqueta -40%. */
+/** "A partir de" + precio de entrada; con oferta: tachado + descuento + etiqueta -40%. */
 export function PriceTag({
   price,
   className = "",
@@ -42,21 +42,27 @@ export function PriceTag({
   children?: React.ReactNode;
 }) {
   const t = useT();
+  const from = startPrice(price);
+  const prefix = (
+    <span className="label self-center text-[0.5em] text-muted">{t.pricing.from}</span>
+  );
   if (!DISCOUNT_PERCENT) {
     return (
-      <span className={className}>
-        {price}
+      <span className={`inline-flex flex-wrap items-baseline gap-x-2 ${className}`}>
+        {prefix}
+        {from}
         {children}
       </span>
     );
   }
   return (
     <span className={`inline-flex flex-wrap items-baseline gap-x-3 ${className}`}>
+      {prefix}
       <s className="text-[0.7em] text-muted" aria-hidden="true">
-        {price}
+        {from}
       </s>
-      <span className="sr-only">{price}</span>
-      <span aria-label={t.promo.discounted}>{discountPrice(price)}</span>
+      <span className="sr-only">{from}</span>
+      <span aria-label={t.promo.discounted}>{discountPrice(from)}</span>
       <span className="label self-center bg-accent px-2 py-1 text-[0.55rem] text-paper">
         -{DISCOUNT_PERCENT}%
       </span>

@@ -1,4 +1,4 @@
-import { addOnIds, contact, packages } from "../../data/catalog";
+import { addOnIds, packages, quoteHref } from "../../data/catalog";
 import { useT } from "../../i18n/LanguageContext";
 import { PriceTag, PromoBanner } from "../Promo";
 import { FadeUp, RevealLines } from "../motion-primitives";
@@ -44,7 +44,7 @@ export function Packages() {
                 className="group border-b border-r border-rule"
               >
                 <a
-                  href={contact.whatsappHref}
+                  href={quoteHref(`${t.pricing.quoteMessage}: ${pkg.name}`)}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="flex h-full flex-col p-8 transition-colors duration-500 hover:bg-ink md:p-10"
@@ -69,6 +69,12 @@ export function Packages() {
                       {copy.includes}
                     </p>
                   </div>
+                  <span className="label mt-auto inline-flex items-center gap-3 pt-8 text-xs text-ink transition-colors duration-500 group-hover:text-paper">
+                    {t.packages.cta}
+                    <span aria-hidden="true" className="text-accent">
+                      →
+                    </span>
+                  </span>
                 </a>
               </FadeUp>
             );
@@ -79,7 +85,7 @@ export function Packages() {
         {featured && (
           <FadeUp delay={0.1}>
             <a
-              href={contact.whatsappHref}
+              href={quoteHref(`${t.pricing.quoteMessage}: ${featured.name}`)}
               target="_blank"
               rel="noreferrer noopener"
               className="mt-8 grid grid-cols-1 bg-ink p-8 text-paper md:mt-10 md:grid-cols-12 md:gap-10 md:p-14"
@@ -108,6 +114,10 @@ export function Packages() {
                     {t.packages.items["creative-brand"].includes}
                   </p>
                 </div>
+                <span className="label mt-8 inline-flex items-center gap-3 bg-accent px-6 py-4 text-xs text-paper">
+                  {t.packages.cta}
+                  <span aria-hidden="true">→</span>
+                </span>
               </div>
             </a>
           </FadeUp>
